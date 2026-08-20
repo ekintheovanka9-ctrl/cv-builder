@@ -8,7 +8,7 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>CVForge - Professional CV Builder</title>
+<title>CVForge - CV & Cover Letter Builder</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
@@ -24,9 +24,6 @@ font-family:Arial,sans-serif;
 background:#f8fafc;
 color:#111827;
 }
-
-
-/* NAVBAR */
 
 nav{
 height:65px;
@@ -49,9 +46,6 @@ color:#111827;
 font-weight:bold;
 }
 
-
-/* HERO */
-
 .hero{
 text-align:center;
 padding:75px 20px;
@@ -61,12 +55,12 @@ background:white;
 .hero h1{
 max-width:750px;
 margin:auto;
-font-size:48px;
+font-size:46px;
 line-height:1.1;
 }
 
 .hero p{
-max-width:600px;
+max-width:650px;
 margin:20px auto;
 font-size:18px;
 line-height:1.6;
@@ -83,9 +77,6 @@ border-radius:9px;
 text-decoration:none;
 font-weight:bold;
 }
-
-
-/* FEATURES */
 
 .features{
 max-width:1000px;
@@ -119,9 +110,6 @@ margin-top:0;
 color:#64748b;
 line-height:1.5;
 }
-
-
-/* BUILDER */
 
 #builder{
 max-width:1100px;
@@ -158,15 +146,10 @@ textarea,
 select{
 
 width:100%;
-
 padding:12px;
-
 margin-top:6px;
-
 border:1px solid #d1d5db;
-
 border-radius:8px;
-
 font-size:15px;
 
 }
@@ -178,38 +161,23 @@ min-height:90px;
 button{
 
 width:100%;
-
 padding:13px;
-
 margin-top:12px;
-
 border:0;
-
 border-radius:8px;
-
 background:#111827;
-
 color:white;
-
 font-size:16px;
-
 font-weight:bold;
-
 cursor:pointer;
 
 }
 
-
-/* CV */
-
 .cv{
 
 background:white;
-
 min-height:700px;
-
 padding:45px;
-
 border:1px solid #ddd;
 
 }
@@ -217,7 +185,6 @@ border:1px solid #ddd;
 .cv h1{
 
 margin:0;
-
 font-size:34px;
 
 }
@@ -225,7 +192,6 @@ font-size:34px;
 .cv .contact{
 
 color:#64748b;
-
 margin-top:8px;
 
 }
@@ -233,9 +199,7 @@ margin-top:8px;
 .cv h2{
 
 margin-top:30px;
-
 padding-bottom:7px;
-
 border-bottom:2px solid #111827;
 
 }
@@ -243,7 +207,6 @@ border-bottom:2px solid #111827;
 .cv p{
 
 line-height:1.6;
-
 white-space:pre-line;
 
 }
@@ -260,7 +223,6 @@ border-left:10px solid #2563eb;
 .modern h2{
 
 color:#2563eb;
-
 border-bottom:2px solid #2563eb;
 
 }
@@ -289,7 +251,6 @@ text-align:center;
 .minimal h2{
 
 text-align:center;
-
 border-bottom:1px solid #999;
 
 }
@@ -303,16 +264,9 @@ border-top:12px solid #111827;
 
 }
 
-.professional h1{
-
-letter-spacing:1px;
-
-}
-
 .professional h2{
 
 text-transform:uppercase;
-
 font-size:16px;
 
 }
@@ -339,16 +293,43 @@ font-family:Georgia,serif;
 }
 
 
+/* COVER LETTER */
+
+.cover-section{
+
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
+
+}
+
+.cover-box{
+
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.06);
+
+}
+
+.cover-preview{
+
+margin-top:25px;
+background:white;
+border:1px solid #ddd;
+padding:45px;
+min-height:500px;
+line-height:1.7;
+white-space:pre-line;
+
+}
+
+
 /* PRICING */
 
 .pricing{
 
-max-width:900px;
-
-margin:30px auto;
-
-padding:20px;
-
+padding:60px 20px;
 text-align:center;
 
 }
@@ -356,17 +337,11 @@ text-align:center;
 .pricing-card{
 
 background:white;
-
 border:1px solid #e5e7eb;
-
 border-radius:15px;
-
 padding:30px;
-
 max-width:400px;
-
 margin:auto;
-
 box-shadow:0 5px 20px rgba(0,0,0,.06);
 
 }
@@ -374,9 +349,7 @@ box-shadow:0 5px 20px rgba(0,0,0,.06);
 .price{
 
 font-size:40px;
-
 font-weight:bold;
-
 margin:15px 0;
 
 }
@@ -384,7 +357,6 @@ margin:15px 0;
 .price span{
 
 font-size:15px;
-
 color:#64748b;
 
 }
@@ -395,13 +367,9 @@ color:#64748b;
 footer{
 
 margin-top:60px;
-
 padding:30px;
-
 background:#111827;
-
 color:white;
-
 text-align:center;
 
 }
@@ -435,52 +403,9 @@ padding:25px;
 
 }
 
-}
+.cover-preview{
 
-
-/* PRINT */
-
-@media print{
-
-body{
-
-background:white;
-
-}
-
-nav,
-.hero,
-.features,
-.form-box,
-.preview-title,
-.pricing,
-footer{
-
-display:none;
-
-}
-
-.container{
-
-display:block;
-
-margin:0;
-
-padding:0;
-
-}
-
-.box{
-
-box-shadow:none;
-
-padding:0;
-
-}
-
-.cv{
-
-border:0;
+padding:25px;
 
 }
 
@@ -493,8 +418,6 @@ border:0;
 
 <body>
 
-
-<!-- NAVBAR -->
 
 <nav>
 
@@ -509,17 +432,16 @@ Create CV
 </nav>
 
 
-<!-- HERO -->
-
 <section class="hero">
 
 <h1>
-Create a Professional CV in Minutes
+Create a Professional CV & Cover Letter
 </h1>
 
 <p>
-Build a beautiful and professional resume without complicated design software.
-Choose a template, enter your information, and download your CV.
+Build job application documents in minutes.
+Choose a template, enter your information,
+and download your documents.
 </p>
 
 <a
@@ -532,12 +454,10 @@ Create My CV →
 </section>
 
 
-<!-- FEATURES -->
-
 <section class="features">
 
 <h2>
-Why CVForge?
+Everything You Need
 </h2>
 
 <div class="cards">
@@ -550,7 +470,7 @@ Why CVForge?
 </h3>
 
 <p>
-Create your CV in just a few minutes.
+Create professional documents in minutes.
 </p>
 
 </div>
@@ -563,7 +483,7 @@ Create your CV in just a few minutes.
 </h3>
 
 <p>
-Choose from multiple professional CV designs.
+Choose from multiple clean CV designs.
 </p>
 
 </div>
@@ -572,11 +492,11 @@ Choose from multiple professional CV designs.
 <div class="card">
 
 <h3>
-📱 Mobile Friendly
+📄 PDF Download
 </h3>
 
 <p>
-Create your CV from your phone or computer.
+Download your CV as a PDF file instantly.
 </p>
 
 </div>
@@ -587,7 +507,8 @@ Create your CV from your phone or computer.
 </section>
 
 
-<!-- BUILDER -->
+
+<!-- CV BUILDER -->
 
 <section id="builder">
 
@@ -598,7 +519,7 @@ CV Builder
 </h2>
 
 <p>
-Fill in your information below.
+Create your professional resume.
 </p>
 
 </div>
@@ -607,9 +528,7 @@ Fill in your information below.
 <div class="container">
 
 
-<!-- FORM -->
-
-<div class="box form-box">
+<div class="box">
 
 <h2>
 Your Information
@@ -652,7 +571,7 @@ About Me
 
 <textarea
 id="about"
-placeholder="Write a short professional introduction"
+placeholder="Write about yourself"
 ></textarea>
 
 
@@ -677,7 +596,7 @@ placeholder="University - Degree - Year"
 
 
 <label>
-Choose Template
+Template
 </label>
 
 <select id="template">
@@ -706,27 +625,21 @@ Executive ⭐ PRO
 
 
 <button onclick="generateCV()">
-
 Generate CV
-
 </button>
 
 
 <button onclick="downloadPDF()">
-
 Download CV as PDF
-
 </button>
 
 
 </div>
 
 
-<!-- PREVIEW -->
-
 <div class="box">
 
-<h2 class="preview-title">
+<h2>
 CV Preview
 </h2>
 
@@ -744,7 +657,6 @@ Your Name
 Email | Phone
 </div>
 
-
 <h2>
 About Me
 </h2>
@@ -752,7 +664,6 @@ About Me
 <p>
 Your introduction will appear here.
 </p>
-
 
 <h2>
 Experience
@@ -762,7 +673,6 @@ Experience
 Your experience will appear here.
 </p>
 
-
 <h2>
 Education
 </h2>
@@ -771,15 +681,110 @@ Education
 Your education will appear here.
 </p>
 
-
 </div>
 
 </div>
+
+</div>
+
+</section>
+
+
+
+<!-- COVER LETTER -->
+
+<section class="cover-section">
+
+<h2 style="text-align:center;">
+Cover Letter Generator
+</h2>
+
+<p style="text-align:center;color:#64748b;">
+Create a professional cover letter without AI.
+</p>
+
+
+<div class="cover-box">
+
+
+<label>
+Your Name
+</label>
+
+<input
+id="coverName"
+placeholder="John Doe"
+>
+
+
+<label>
+Job Position
+</label>
+
+<input
+id="jobPosition"
+placeholder="Marketing Specialist"
+>
+
+
+<label>
+Company Name
+</label>
+
+<input
+id="companyName"
+placeholder="ABC Company"
+>
+
+
+<label>
+Your Skills
+</label>
+
+<textarea
+id="skills"
+placeholder="Communication, marketing, teamwork, problem solving"
+></textarea>
+
+
+<label>
+Your Experience
+</label>
+
+<textarea
+id="coverExperience"
+placeholder="Describe your relevant experience"
+></textarea>
+
+
+<button onclick="generateCoverLetter()">
+
+Generate Cover Letter
+
+</button>
+
+
+<div
+id="coverPreview"
+class="cover-preview"
+>
+
+Your cover letter will appear here.
+
+</div>
+
+
+<button onclick="downloadCoverLetter()">
+
+Download Cover Letter PDF
+
+</button>
 
 
 </div>
 
 </section>
+
 
 
 <!-- PRICING -->
@@ -814,15 +819,15 @@ $4.99
 </p>
 
 <p>
+✓ Cover letter generator
+</p>
+
+<p>
 ✓ Multiple CV versions
 </p>
 
 <p>
-✓ Cover letter tools
-</p>
-
-<p>
-✓ Custom designs
+✓ Professional designs
 </p>
 
 
@@ -838,7 +843,6 @@ Upgrade to PRO
 </section>
 
 
-<!-- FOOTER -->
 
 <footer>
 
@@ -847,10 +851,11 @@ CVForge © 2026
 </footer>
 
 
+
 <script>
 
 
-/* GENERATE CV */
+/* CV GENERATOR */
 
 function generateCV(){
 
@@ -930,7 +935,8 @@ ${education || "Your education will appear here."}
 }
 
 
-/* DOWNLOAD PDF */
+
+/* CV PDF */
 
 function downloadPDF(){
 
@@ -974,7 +980,7 @@ const pdf =
 new jsPDF();
 
 
-let y = 25;
+let y=25;
 
 
 pdf.setFontSize(24);
@@ -986,19 +992,19 @@ y
 );
 
 
-y += 10;
+y+=10;
 
 
 pdf.setFontSize(11);
 
 pdf.text(
-email + " | " + phone,
+email+" | "+phone,
 20,
 y
 );
 
 
-y += 18;
+y+=18;
 
 
 pdf.setFontSize(16);
@@ -1010,7 +1016,7 @@ y
 );
 
 
-y += 8;
+y+=8;
 
 
 pdf.setFontSize(11);
@@ -1021,7 +1027,6 @@ about || "No information provided.",
 170
 );
 
-
 pdf.text(
 aboutLines,
 20,
@@ -1029,9 +1034,8 @@ y
 );
 
 
-y +=
-aboutLines.length * 6
-+ 15;
+y+=
+aboutLines.length*6+15;
 
 
 pdf.setFontSize(16);
@@ -1043,7 +1047,7 @@ y
 );
 
 
-y += 8;
+y+=8;
 
 
 pdf.setFontSize(11);
@@ -1054,7 +1058,6 @@ experience || "No information provided.",
 170
 );
 
-
 pdf.text(
 experienceLines,
 20,
@@ -1062,9 +1065,8 @@ y
 );
 
 
-y +=
-experienceLines.length * 6
-+ 15;
+y+=
+experienceLines.length*6+15;
 
 
 pdf.setFontSize(16);
@@ -1076,7 +1078,7 @@ y
 );
 
 
-y += 8;
+y+=8;
 
 
 pdf.setFontSize(11);
@@ -1087,7 +1089,6 @@ education || "No information provided.",
 170
 );
 
-
 pdf.text(
 educationLines,
 20,
@@ -1097,19 +1098,160 @@ y
 
 pdf.save(
 name.replace(/\s+/g,"-")
-+
-"-CV.pdf"
++"-CV.pdf"
 );
 
 }
 
 
-/* PRO BUTTON */
+
+/* COVER LETTER */
+
+function generateCoverLetter(){
+
+
+const name =
+document.getElementById("coverName").value
+|| "Your Name";
+
+
+const position =
+document.getElementById("jobPosition").value
+|| "the position";
+
+
+const company =
+document.getElementById("companyName").value
+|| "your company";
+
+
+const skills =
+document.getElementById("skills").value
+|| "relevant skills";
+
+
+const experience =
+document.getElementById("coverExperience").value
+|| "relevant professional experience";
+
+
+const letter =
+
+"Dear Hiring Manager,\n\n"
+
++
+
+"I am writing to apply for the "
++
+position
++
+" position at "
++
+company
++
+". I am very interested in this opportunity and believe my background would allow me to contribute positively to your team.\n\n"
+
++
+
+"My key skills include "
++
+skills
++
+". I also have experience in "
++
+experience
++
+". These experiences have helped me develop strong professional and communication skills.\n\n"
+
++
+
+"I would welcome the opportunity to discuss how my skills and experience could contribute to "
++
+company
++
+". Thank you for considering my application.\n\n"
+
++
+
+"Sincerely,\n"
++
+name;
+
+
+document.getElementById(
+"coverPreview"
+).textContent = letter;
+
+}
+
+
+
+/* COVER LETTER PDF */
+
+function downloadCoverLetter(){
+
+
+const {
+jsPDF
+} = window.jspdf;
+
+
+const text =
+document.getElementById(
+"coverPreview"
+).textContent;
+
+
+if(
+!text ||
+text ===
+"Your cover letter will appear here."
+){
+
+alert(
+"Please generate your cover letter first."
+);
+
+return;
+
+}
+
+
+const pdf =
+new jsPDF();
+
+
+pdf.setFontSize(11);
+
+
+const lines =
+pdf.splitTextToSize(
+text,
+170
+);
+
+
+pdf.text(
+lines,
+20,
+25
+);
+
+
+pdf.save(
+"Cover-Letter.pdf"
+);
+
+}
+
+
+
+/* PRO */
 
 function showProMessage(){
 
 alert(
-"CVForge PRO is coming soon! Premium features will be available soon."
+"CVForge PRO is coming soon. Payment will be available soon."
 );
 
 }
