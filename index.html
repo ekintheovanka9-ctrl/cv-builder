@@ -9,12 +9,13 @@
 
 <title>CVForge - CV & Cover Letter Builder</title>
 
-<!-- GOOGLE ANALYTICS -->
+<!-- GOOGLE SEARCH CONSOLE -->
+<meta name="google-site-verification" content="l1wFMvgLAbQeGu8IrnzF5d9ZgO1O9-RNqwhpq5OKBNc" />
 
+<!-- GOOGLE ANALYTICS -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B23RGS2XBQ"></script>
 
 <script>
-
 window.dataLayer = window.dataLayer || [];
 
 function gtag(){
@@ -24,12 +25,9 @@ dataLayer.push(arguments);
 gtag('js', new Date());
 
 gtag('config', 'G-B23RGS2XBQ');
-
 </script>
 
-
 <!-- PDF LIBRARY -->
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 
@@ -45,9 +43,6 @@ font-family:Arial,sans-serif;
 background:#f8fafc;
 color:#111827;
 }
-
-
-/* NAVBAR */
 
 nav{
 height:65px;
@@ -69,9 +64,6 @@ text-decoration:none;
 color:#111827;
 font-weight:bold;
 }
-
-
-/* HERO */
 
 .hero{
 text-align:center;
@@ -104,9 +96,6 @@ border-radius:9px;
 text-decoration:none;
 font-weight:bold;
 }
-
-
-/* FEATURES */
 
 .features{
 max-width:1000px;
@@ -141,9 +130,6 @@ color:#64748b;
 line-height:1.5;
 }
 
-
-/* BUILDER */
-
 #builder{
 max-width:1100px;
 margin:auto;
@@ -177,14 +163,12 @@ margin-top:12px;
 input,
 textarea,
 select{
-
 width:100%;
 padding:12px;
 margin-top:6px;
 border:1px solid #d1d5db;
 border-radius:8px;
 font-size:15px;
-
 }
 
 textarea{
@@ -192,7 +176,6 @@ min-height:90px;
 }
 
 button{
-
 width:100%;
 padding:13px;
 margin-top:12px;
@@ -203,153 +186,97 @@ color:white;
 font-size:16px;
 font-weight:bold;
 cursor:pointer;
-
 }
 
-
-/* CV */
-
 .cv{
-
 background:white;
 min-height:700px;
 padding:45px;
 border:1px solid #ddd;
-
 }
 
 .cv h1{
-
 margin:0;
 font-size:34px;
-
 }
 
 .cv .contact{
-
 color:#64748b;
 margin-top:8px;
-
 }
 
 .cv h2{
-
 margin-top:30px;
 padding-bottom:7px;
 border-bottom:2px solid #111827;
-
 }
 
 .cv p{
-
 line-height:1.6;
 white-space:pre-line;
-
 }
 
-
-/* MODERN */
-
 .modern{
-
 border-left:10px solid #2563eb;
-
 }
 
 .modern h2{
-
 color:#2563eb;
 border-bottom:2px solid #2563eb;
-
 }
 
-
-/* MINIMAL */
-
 .minimal{
-
 font-family:Georgia,serif;
-
 }
 
 .minimal h1{
-
 text-align:center;
-
 }
 
 .minimal .contact{
-
 text-align:center;
-
 }
 
 .minimal h2{
-
 text-align:center;
 border-bottom:1px solid #999;
-
 }
 
-
-/* PROFESSIONAL */
-
 .professional{
-
 border-top:12px solid #111827;
-
 }
 
 .professional h2{
-
 text-transform:uppercase;
 font-size:16px;
-
 }
 
-
-/* EXECUTIVE */
-
 .executive{
-
 border-left:15px solid #374151;
-
 }
 
 .executive h1{
-
 font-family:Georgia,serif;
-
 }
 
 .executive h2{
-
 font-family:Georgia,serif;
-
 }
 
-
-/* COVER LETTER */
-
 .cover-section{
-
 max-width:1100px;
 margin:auto;
 padding:60px 20px;
-
 }
 
 .cover-box{
-
 background:white;
 padding:25px;
 border-radius:15px;
 box-shadow:0 5px 20px rgba(0,0,0,.06);
-
 }
 
 .cover-preview{
-
 margin-top:25px;
 background:white;
 border:1px solid #ddd;
@@ -357,21 +284,14 @@ padding:45px;
 min-height:500px;
 line-height:1.7;
 white-space:pre-line;
-
 }
 
-
-/* PRICING */
-
 .pricing{
-
 padding:60px 20px;
 text-align:center;
-
 }
 
 .pricing-card{
-
 background:white;
 border:1px solid #e5e7eb;
 border-radius:15px;
@@ -379,114 +299,47 @@ padding:30px;
 max-width:400px;
 margin:auto;
 box-shadow:0 5px 20px rgba(0,0,0,.06);
-
 }
 
 .price{
-
 font-size:40px;
 font-weight:bold;
 margin:15px 0;
-
 }
 
 .price span{
-
 font-size:15px;
 color:#64748b;
-
 }
 
-
-/* FOOTER */
-
 footer{
-
 margin-top:60px;
 padding:30px;
 background:#111827;
 color:white;
 text-align:center;
-
 }
-
-
-/* MOBILE */
 
 @media(max-width:800px){
 
 .hero h1{
-
 font-size:36px;
-
 }
 
 .cards{
-
 grid-template-columns:1fr;
-
 }
 
 .container{
-
 grid-template-columns:1fr;
-
 }
 
 .cv{
-
 padding:25px;
-
 }
 
 .cover-preview{
-
 padding:25px;
-
-}
-
-}
-
-
-/* PRINT */
-
-@media print{
-
-body{
-background:white;
-}
-
-nav,
-.hero,
-.features,
-.form-box,
-.preview-title,
-.pricing,
-footer{
-
-display:none;
-
-}
-
-.container{
-
-display:block;
-margin:0;
-padding:0;
-
-}
-
-.box{
-
-box-shadow:none;
-padding:0;
-
-}
-
-.cv{
-
-border:0;
-
 }
 
 }
@@ -498,8 +351,6 @@ border:0;
 
 <body>
 
-
-<!-- NAVBAR -->
 
 <nav>
 
@@ -514,8 +365,6 @@ Create CV
 </nav>
 
 
-<!-- HERO -->
-
 <section class="hero">
 
 <h1>
@@ -528,17 +377,12 @@ Choose a template, enter your information,
 and download your documents.
 </p>
 
-<a
-class="cta"
-href="#builder"
->
+<a class="cta" href="#builder">
 Create My CV →
 </a>
 
 </section>
 
-
-<!-- FEATURES -->
 
 <section class="features">
 
@@ -547,7 +391,6 @@ Everything You Need
 </h2>
 
 <div class="cards">
-
 
 <div class="card">
 
@@ -587,13 +430,10 @@ Download your CV as a PDF file instantly.
 
 </div>
 
-
 </div>
 
 </section>
 
-
-<!-- CV BUILDER -->
 
 <section id="builder">
 
@@ -613,9 +453,7 @@ Create your professional resume.
 <div class="container">
 
 
-<!-- FORM -->
-
-<div class="box form-box">
+<div class="box">
 
 <h2>
 Your Information
@@ -626,60 +464,45 @@ Your Information
 Full Name
 </label>
 
-<input
-id="name"
-placeholder="John Doe"
->
+<input id="name" placeholder="John Doe">
 
 
 <label>
 Email
 </label>
 
-<input
-id="email"
-placeholder="john@email.com"
->
+<input id="email" placeholder="john@email.com">
 
 
 <label>
 Phone
 </label>
 
-<input
-id="phone"
-placeholder="+62 812 3456 789"
->
+<input id="phone" placeholder="+62 812 3456 789">
 
 
 <label>
 About Me
 </label>
 
-<textarea
-id="about"
-placeholder="Write about yourself"
-></textarea>
+<textarea id="about"
+placeholder="Write about yourself"></textarea>
 
 
 <label>
 Experience
 </label>
 
-<textarea
-id="experience"
-placeholder="Company - Position - Years"
-></textarea>
+<textarea id="experience"
+placeholder="Company - Position - Years"></textarea>
 
 
 <label>
 Education
 </label>
 
-<textarea
-id="education"
-placeholder="University - Degree - Year"
-></textarea>
+<textarea id="education"
+placeholder="University - Degree - Year"></textarea>
 
 
 <label>
@@ -720,23 +543,17 @@ Generate CV
 Download CV as PDF
 </button>
 
-
 </div>
 
 
-<!-- PREVIEW -->
-
 <div class="box">
 
-<h2 class="preview-title">
+<h2>
 CV Preview
 </h2>
 
 
-<div
-id="cvPreview"
-class="cv"
->
+<div id="cvPreview" class="cv">
 
 <h1>
 Your Name
@@ -782,8 +599,6 @@ Your education will appear here.
 </section>
 
 
-<!-- COVER LETTER -->
-
 <section class="cover-section">
 
 <h2 style="text-align:center;">
@@ -802,50 +617,40 @@ Create a professional cover letter without AI.
 Your Name
 </label>
 
-<input
-id="coverName"
-placeholder="John Doe"
->
+<input id="coverName"
+placeholder="John Doe">
 
 
 <label>
 Job Position
 </label>
 
-<input
-id="jobPosition"
-placeholder="Marketing Specialist"
->
+<input id="jobPosition"
+placeholder="Marketing Specialist">
 
 
 <label>
 Company Name
 </label>
 
-<input
-id="companyName"
-placeholder="ABC Company"
->
+<input id="companyName"
+placeholder="ABC Company">
 
 
 <label>
 Your Skills
 </label>
 
-<textarea
-id="skills"
-placeholder="Communication, marketing, teamwork, problem solving"
-></textarea>
+<textarea id="skills"
+placeholder="Communication, marketing, teamwork, problem solving"></textarea>
 
 
 <label>
 Your Experience
 </label>
 
-<textarea
-id="coverExperience"
-placeholder="Describe your relevant experience"
-></textarea>
+<textarea id="coverExperience"
+placeholder="Describe your relevant experience"></textarea>
 
 
 <button onclick="generateCoverLetter()">
@@ -853,10 +658,7 @@ Generate Cover Letter
 </button>
 
 
-<div
-id="coverPreview"
-class="cover-preview"
->
+<div id="coverPreview" class="cover-preview">
 
 Your cover letter will appear here.
 
@@ -872,8 +674,6 @@ Download Cover Letter PDF
 
 </section>
 
-
-<!-- PRICING -->
 
 <section class="pricing">
 
@@ -937,10 +737,7 @@ CVForge © 2026
 <script>
 
 
-/* CV GENERATOR */
-
 function generateCV(){
-
 
 const name =
 document.getElementById("name").value;
@@ -963,14 +760,11 @@ document.getElementById("education").value;
 const template =
 document.getElementById("template").value;
 
-
 const preview =
 document.getElementById("cvPreview");
 
-
 preview.className =
 "cv " + template;
-
 
 preview.innerHTML = `
 
@@ -979,12 +773,9 @@ ${name || "Your Name"}
 </h1>
 
 <div class="contact">
-
 ${email || "Email"} |
 ${phone || "Phone"}
-
 </div>
-
 
 <h2>
 About Me
@@ -994,7 +785,6 @@ About Me
 ${about || "Your professional introduction will appear here."}
 </p>
 
-
 <h2>
 Experience
 </h2>
@@ -1002,7 +792,6 @@ Experience
 <p>
 ${experience || "Your work experience will appear here."}
 </p>
-
 
 <h2>
 Education
@@ -1017,52 +806,38 @@ ${education || "Your education will appear here."}
 }
 
 
-/* CV PDF */
-
 function downloadPDF(){
 
-
-const {
-jsPDF
-} = window.jspdf;
-
+const {jsPDF} = window.jspdf;
 
 const name =
 document.getElementById("name").value
 || "My-CV";
 
-
 const email =
 document.getElementById("email").value
 || "";
-
 
 const phone =
 document.getElementById("phone").value
 || "";
 
-
 const about =
 document.getElementById("about").value
 || "";
-
 
 const experience =
 document.getElementById("experience").value
 || "";
 
-
 const education =
 document.getElementById("education").value
 || "";
 
-
 const pdf =
 new jsPDF();
 
-
-let y=25;
-
+let y = 25;
 
 pdf.setFontSize(24);
 
@@ -1072,21 +847,17 @@ name,
 y
 );
 
-
-y+=10;
-
+y += 10;
 
 pdf.setFontSize(11);
 
 pdf.text(
-email+" | "+phone,
+email + " | " + phone,
 20,
 y
 );
 
-
-y+=18;
-
+y += 18;
 
 pdf.setFontSize(16);
 
@@ -1096,9 +867,7 @@ pdf.text(
 y
 );
 
-
-y+=8;
-
+y += 8;
 
 pdf.setFontSize(11);
 
@@ -1114,10 +883,8 @@ aboutLines,
 y
 );
 
-
-y+=
-aboutLines.length*6+15;
-
+y +=
+aboutLines.length * 6 + 15;
 
 pdf.setFontSize(16);
 
@@ -1127,9 +894,7 @@ pdf.text(
 y
 );
 
-
-y+=8;
-
+y += 8;
 
 pdf.setFontSize(11);
 
@@ -1145,10 +910,8 @@ experienceLines,
 y
 );
 
-
-y+=
-experienceLines.length*6+15;
-
+y +=
+experienceLines.length * 6 + 15;
 
 pdf.setFontSize(16);
 
@@ -1158,9 +921,7 @@ pdf.text(
 y
 );
 
-
-y+=8;
-
+y += 8;
 
 pdf.setFontSize(11);
 
@@ -1176,44 +937,36 @@ educationLines,
 y
 );
 
-
 pdf.save(
 name.replace(/\s+/g,"-")
-+"-CV.pdf"
++
+"-CV.pdf"
 );
 
 }
 
 
-/* COVER LETTER */
-
 function generateCoverLetter(){
-
 
 const name =
 document.getElementById("coverName").value
 || "Your Name";
 
-
 const position =
 document.getElementById("jobPosition").value
 || "the position";
-
 
 const company =
 document.getElementById("companyName").value
 || "your company";
 
-
 const skills =
 document.getElementById("skills").value
 || "relevant skills";
 
-
 const experience =
 document.getElementById("coverExperience").value
 || "relevant professional experience";
-
 
 const letter =
 
@@ -1257,7 +1010,6 @@ company
 +
 name;
 
-
 document.getElementById(
 "coverPreview"
 ).textContent = letter;
@@ -1265,21 +1017,14 @@ document.getElementById(
 }
 
 
-/* COVER LETTER PDF */
-
 function downloadCoverLetter(){
 
-
-const {
-jsPDF
-} = window.jspdf;
-
+const {jsPDF} = window.jspdf;
 
 const text =
 document.getElementById(
 "coverPreview"
 ).textContent;
-
 
 if(
 !text ||
@@ -1295,13 +1040,10 @@ return;
 
 }
 
-
 const pdf =
 new jsPDF();
 
-
 pdf.setFontSize(11);
-
 
 const lines =
 pdf.splitTextToSize(
@@ -1309,13 +1051,11 @@ text,
 170
 );
 
-
 pdf.text(
 lines,
 20,
 25
 );
-
 
 pdf.save(
 "Cover-Letter.pdf"
@@ -1323,8 +1063,6 @@ pdf.save(
 
 }
 
-
-/* PRO */
 
 function showProMessage(){
 
