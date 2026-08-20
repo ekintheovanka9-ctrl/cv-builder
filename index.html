@@ -8,7 +8,7 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>CVForge - CV Builder</title>
+<title>CVForge - Professional CV Builder</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
@@ -21,30 +21,120 @@ box-sizing:border-box;
 body{
 margin:0;
 font-family:Arial,sans-serif;
-background:#f1f5f9;
+background:#f8fafc;
 color:#111827;
 }
 
-header{
+
+/* NAVBAR */
+
+nav{
+height:65px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 7%;
+background:white;
+border-bottom:1px solid #e5e7eb;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+nav a{
+text-decoration:none;
+color:#111827;
+font-weight:bold;
+}
+
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:75px 20px;
+background:white;
+}
+
+.hero h1{
+max-width:750px;
+margin:auto;
+font-size:48px;
+line-height:1.1;
+}
+
+.hero p{
+max-width:600px;
+margin:20px auto;
+font-size:18px;
+line-height:1.6;
+color:#64748b;
+}
+
+.cta{
+display:inline-block;
+margin-top:15px;
+padding:15px 28px;
 background:#111827;
 color:white;
+border-radius:9px;
+text-decoration:none;
+font-weight:bold;
+}
+
+
+/* FEATURES */
+
+.features{
+max-width:1000px;
+margin:auto;
+padding:60px 20px;
+}
+
+.features h2{
 text-align:center;
-padding:35px 20px;
+margin-bottom:35px;
 }
 
-header h1{
-margin:0;
-font-size:36px;
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
 }
 
-header p{
-color:#cbd5e1;
+.card{
+background:white;
+padding:25px;
+border-radius:12px;
+border:1px solid #e5e7eb;
+}
+
+.card h3{
+margin-top:0;
+}
+
+.card p{
+color:#64748b;
+line-height:1.5;
+}
+
+
+/* BUILDER */
+
+#builder{
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
+}
+
+.builder-title{
+text-align:center;
+margin-bottom:30px;
 }
 
 .container{
-max-width:1100px;
-margin:25px auto;
-padding:15px;
 display:grid;
 grid-template-columns:380px 1fr;
 gap:25px;
@@ -54,7 +144,7 @@ gap:25px;
 background:white;
 padding:22px;
 border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
+box-shadow:0 5px 20px rgba(0,0,0,.06);
 }
 
 label{
@@ -105,7 +195,12 @@ font-size:16px;
 
 font-weight:bold;
 
+cursor:pointer;
+
 }
+
+
+/* CV */
 
 .cv{
 
@@ -200,9 +295,133 @@ border-bottom:1px solid #999;
 }
 
 
+/* PROFESSIONAL */
+
+.professional{
+
+border-top:12px solid #111827;
+
+}
+
+.professional h1{
+
+letter-spacing:1px;
+
+}
+
+.professional h2{
+
+text-transform:uppercase;
+
+font-size:16px;
+
+}
+
+
+/* EXECUTIVE */
+
+.executive{
+
+border-left:15px solid #374151;
+
+}
+
+.executive h1{
+
+font-family:Georgia,serif;
+
+}
+
+.executive h2{
+
+font-family:Georgia,serif;
+
+}
+
+
+/* PRICING */
+
+.pricing{
+
+max-width:900px;
+
+margin:30px auto;
+
+padding:20px;
+
+text-align:center;
+
+}
+
+.pricing-card{
+
+background:white;
+
+border:1px solid #e5e7eb;
+
+border-radius:15px;
+
+padding:30px;
+
+max-width:400px;
+
+margin:auto;
+
+box-shadow:0 5px 20px rgba(0,0,0,.06);
+
+}
+
+.price{
+
+font-size:40px;
+
+font-weight:bold;
+
+margin:15px 0;
+
+}
+
+.price span{
+
+font-size:15px;
+
+color:#64748b;
+
+}
+
+
+/* FOOTER */
+
+footer{
+
+margin-top:60px;
+
+padding:30px;
+
+background:#111827;
+
+color:white;
+
+text-align:center;
+
+}
+
+
 /* MOBILE */
 
 @media(max-width:800px){
+
+.hero h1{
+
+font-size:36px;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
 
 .container{
 
@@ -218,6 +437,55 @@ padding:25px;
 
 }
 
+
+/* PRINT */
+
+@media print{
+
+body{
+
+background:white;
+
+}
+
+nav,
+.hero,
+.features,
+.form-box,
+.preview-title,
+.pricing,
+footer{
+
+display:none;
+
+}
+
+.container{
+
+display:block;
+
+margin:0;
+
+padding:0;
+
+}
+
+.box{
+
+box-shadow:none;
+
+padding:0;
+
+}
+
+.cv{
+
+border:0;
+
+}
+
+}
+
 </style>
 
 </head>
@@ -226,17 +494,114 @@ padding:25px;
 <body>
 
 
-<header>
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+CVForge
+</div>
+
+<a href="#builder">
+Create CV
+</a>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
 
 <h1>
-CVForge
+Create a Professional CV in Minutes
 </h1>
 
 <p>
-Create a professional CV in minutes
+Build a beautiful and professional resume without complicated design software.
+Choose a template, enter your information, and download your CV.
 </p>
 
-</header>
+<a
+class="cta"
+href="#builder"
+>
+Create My CV →
+</a>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="features">
+
+<h2>
+Why CVForge?
+</h2>
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>
+⚡ Fast
+</h3>
+
+<p>
+Create your CV in just a few minutes.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+🎨 Professional Templates
+</h3>
+
+<p>
+Choose from multiple professional CV designs.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+📱 Mobile Friendly
+</h3>
+
+<p>
+Create your CV from your phone or computer.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- BUILDER -->
+
+<section id="builder">
+
+<div class="builder-title">
+
+<h2>
+CV Builder
+</h2>
+
+<p>
+Fill in your information below.
+</p>
+
+</div>
 
 
 <div class="container">
@@ -244,7 +609,7 @@ Create a professional CV in minutes
 
 <!-- FORM -->
 
-<div class="box">
+<div class="box form-box">
 
 <h2>
 Your Information
@@ -329,6 +694,14 @@ Modern
 Minimal
 </option>
 
+<option value="professional">
+Professional ⭐ PRO
+</option>
+
+<option value="executive">
+Executive ⭐ PRO
+</option>
+
 </select>
 
 
@@ -353,8 +726,8 @@ Download CV as PDF
 
 <div class="box">
 
-<h2>
-Preview
+<h2 class="preview-title">
+CV Preview
 </h2>
 
 
@@ -398,18 +771,89 @@ Education
 Your education will appear here.
 </p>
 
+
 </div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- PRICING -->
+
+<section class="pricing">
+
+<h2>
+CVForge PRO
+</h2>
+
+
+<div class="pricing-card">
+
+<h3>
+Professional
+</h3>
+
+
+<div class="price">
+
+$4.99
+
+<span>
+/ month
+</span>
 
 </div>
 
 
+<p>
+✓ Premium CV templates
+</p>
+
+<p>
+✓ Multiple CV versions
+</p>
+
+<p>
+✓ Cover letter tools
+</p>
+
+<p>
+✓ Custom designs
+</p>
+
+
+<button onclick="showProMessage()">
+
+Upgrade to PRO
+
+</button>
+
+
 </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+CVForge © 2026
+
+</footer>
 
 
 <script>
 
 
+/* GENERATE CV */
+
 function generateCV(){
+
 
 const name =
 document.getElementById("name").value;
@@ -486,7 +930,10 @@ ${education || "Your education will appear here."}
 }
 
 
-async function downloadPDF(){
+/* DOWNLOAD PDF */
+
+function downloadPDF(){
+
 
 const {
 jsPDF
@@ -650,7 +1097,19 @@ y
 
 pdf.save(
 name.replace(/\s+/g,"-")
-+ "-CV.pdf"
++
+"-CV.pdf"
+);
+
+}
+
+
+/* PRO BUTTON */
+
+function showProMessage(){
+
+alert(
+"CVForge PRO is coming soon! Premium features will be available soon."
 );
 
 }
