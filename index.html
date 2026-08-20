@@ -5,12 +5,33 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>CVForge - CV & Cover Letter Builder</title>
 
+<!-- GOOGLE ANALYTICS -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B23RGS2XBQ"></script>
+
+<script>
+
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){
+dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+
+gtag('config', 'G-B23RGS2XBQ');
+
+</script>
+
+
+<!-- PDF LIBRARY -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
 
 <style>
 
@@ -24,6 +45,9 @@ font-family:Arial,sans-serif;
 background:#f8fafc;
 color:#111827;
 }
+
+
+/* NAVBAR */
 
 nav{
 height:65px;
@@ -45,6 +69,9 @@ text-decoration:none;
 color:#111827;
 font-weight:bold;
 }
+
+
+/* HERO */
 
 .hero{
 text-align:center;
@@ -78,6 +105,9 @@ text-decoration:none;
 font-weight:bold;
 }
 
+
+/* FEATURES */
+
 .features{
 max-width:1000px;
 margin:auto;
@@ -110,6 +140,9 @@ margin-top:0;
 color:#64748b;
 line-height:1.5;
 }
+
+
+/* BUILDER */
 
 #builder{
 max-width:1100px;
@@ -172,6 +205,9 @@ font-weight:bold;
 cursor:pointer;
 
 }
+
+
+/* CV */
 
 .cv{
 
@@ -411,6 +447,50 @@ padding:25px;
 
 }
 
+
+/* PRINT */
+
+@media print{
+
+body{
+background:white;
+}
+
+nav,
+.hero,
+.features,
+.form-box,
+.preview-title,
+.pricing,
+footer{
+
+display:none;
+
+}
+
+.container{
+
+display:block;
+margin:0;
+padding:0;
+
+}
+
+.box{
+
+box-shadow:none;
+padding:0;
+
+}
+
+.cv{
+
+border:0;
+
+}
+
+}
+
 </style>
 
 </head>
@@ -418,6 +498,8 @@ padding:25px;
 
 <body>
 
+
+<!-- NAVBAR -->
 
 <nav>
 
@@ -431,6 +513,8 @@ Create CV
 
 </nav>
 
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -453,6 +537,8 @@ Create My CV →
 
 </section>
 
+
+<!-- FEATURES -->
 
 <section class="features">
 
@@ -507,7 +593,6 @@ Download your CV as a PDF file instantly.
 </section>
 
 
-
 <!-- CV BUILDER -->
 
 <section id="builder">
@@ -528,7 +613,9 @@ Create your professional resume.
 <div class="container">
 
 
-<div class="box">
+<!-- FORM -->
+
+<div class="box form-box">
 
 <h2>
 Your Information
@@ -637,9 +724,11 @@ Download CV as PDF
 </div>
 
 
+<!-- PREVIEW -->
+
 <div class="box">
 
-<h2>
+<h2 class="preview-title">
 CV Preview
 </h2>
 
@@ -657,6 +746,7 @@ Your Name
 Email | Phone
 </div>
 
+
 <h2>
 About Me
 </h2>
@@ -665,6 +755,7 @@ About Me
 Your introduction will appear here.
 </p>
 
+
 <h2>
 Experience
 </h2>
@@ -672,6 +763,7 @@ Experience
 <p>
 Your experience will appear here.
 </p>
+
 
 <h2>
 Education
@@ -688,7 +780,6 @@ Your education will appear here.
 </div>
 
 </section>
-
 
 
 <!-- COVER LETTER -->
@@ -758,9 +849,7 @@ placeholder="Describe your relevant experience"
 
 
 <button onclick="generateCoverLetter()">
-
 Generate Cover Letter
-
 </button>
 
 
@@ -775,16 +864,13 @@ Your cover letter will appear here.
 
 
 <button onclick="downloadCoverLetter()">
-
 Download Cover Letter PDF
-
 </button>
 
 
 </div>
 
 </section>
-
 
 
 <!-- PRICING -->
@@ -832,9 +918,7 @@ $4.99
 
 
 <button onclick="showProMessage()">
-
 Upgrade to PRO
-
 </button>
 
 
@@ -843,13 +927,11 @@ Upgrade to PRO
 </section>
 
 
-
 <footer>
 
 CVForge © 2026
 
 </footer>
-
 
 
 <script>
@@ -933,7 +1015,6 @@ ${education || "Your education will appear here."}
 `;
 
 }
-
 
 
 /* CV PDF */
@@ -1104,7 +1185,6 @@ name.replace(/\s+/g,"-")
 }
 
 
-
 /* COVER LETTER */
 
 function generateCoverLetter(){
@@ -1185,7 +1265,6 @@ document.getElementById(
 }
 
 
-
 /* COVER LETTER PDF */
 
 function downloadCoverLetter(){
@@ -1243,7 +1322,6 @@ pdf.save(
 );
 
 }
-
 
 
 /* PRO */
