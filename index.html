@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,32 +15,116 @@
 
 body{
   margin:0;
-  font-family:Arial, sans-serif;
-  background:#f1f5f9;
+  font-family:Arial,sans-serif;
+  background:#f8fafc;
   color:#111827;
 }
 
-header{
+/* NAVBAR */
+
+nav{
+  height:65px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 7%;
+  background:white;
+  border-bottom:1px solid #e5e7eb;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:bold;
+}
+
+nav a{
+  text-decoration:none;
+  color:#111827;
+}
+
+/* HERO */
+
+.hero{
+  text-align:center;
+  padding:80px 20px 70px;
+  background:white;
+}
+
+.hero h1{
+  max-width:750px;
+  margin:auto;
+  font-size:48px;
+  line-height:1.1;
+}
+
+.hero p{
+  max-width:600px;
+  margin:20px auto;
+  font-size:18px;
+  color:#64748b;
+  line-height:1.6;
+}
+
+.cta{
+  display:inline-block;
+  margin-top:15px;
+  padding:15px 28px;
   background:#111827;
   color:white;
+  border-radius:9px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* FEATURES */
+
+.features{
+  max-width:1000px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+.features h2{
   text-align:center;
-  padding:35px 20px;
+  margin-bottom:35px;
 }
 
-header h1{
-  margin:0;
-  font-size:34px;
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
 
-header p{
-  margin:10px 0 0;
-  color:#cbd5e1;
+.card{
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  border:1px solid #e5e7eb;
+}
+
+.card h3{
+  margin-top:0;
+}
+
+.card p{
+  color:#64748b;
+  line-height:1.5;
+}
+
+/* BUILDER */
+
+#builder{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+.builder-title{
+  text-align:center;
+  margin-bottom:30px;
 }
 
 .container{
-  max-width:1100px;
-  margin:25px auto;
-  padding:15px;
   display:grid;
   grid-template-columns:380px 1fr;
   gap:25px;
@@ -49,7 +134,7 @@ header p{
   background:white;
   padding:22px;
   border-radius:15px;
-  box-shadow:0 5px 20px rgba(0,0,0,.08);
+  box-shadow:0 5px 20px rgba(0,0,0,.06);
 }
 
 label{
@@ -85,10 +170,6 @@ button{
   font-weight:bold;
 }
 
-button:active{
-  transform:scale(.98);
-}
-
 .cv{
   background:white;
   min-height:700px;
@@ -117,8 +198,7 @@ button:active{
   white-space:pre-line;
 }
 
-
-/* TEMPLATE 2 */
+/* MODERN */
 
 .modern{
   border-left:10px solid #2563eb;
@@ -129,11 +209,10 @@ button:active{
   border-bottom:2px solid #2563eb;
 }
 
-
-/* TEMPLATE 3 */
+/* MINIMAL */
 
 .minimal{
-  font-family:Georgia, serif;
+  font-family:Georgia,serif;
 }
 
 .minimal h1{
@@ -149,10 +228,27 @@ button:active{
   border-bottom:1px solid #999;
 }
 
+/* FOOTER */
+
+footer{
+  text-align:center;
+  padding:30px;
+  color:#64748b;
+  background:#111827;
+  color:white;
+}
 
 /* MOBILE */
 
 @media(max-width:800px){
+
+  .hero h1{
+    font-size:36px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
 
   .container{
     grid-template-columns:1fr;
@@ -164,53 +260,119 @@ button:active{
 
 }
 
-
-/* PRINT */
-
-@media print{
-
-  body{
-    background:white;
-  }
-
-  header,
-  .form-box,
-  .preview-title{
-    display:none;
-  }
-
-  .container{
-    display:block;
-    margin:0;
-    padding:0;
-  }
-
-  .box{
-    box-shadow:none;
-    padding:0;
-  }
-
-  .cv{
-    border:0;
-  }
-
-}
-
 </style>
-</head>
 
+</head>
 
 <body>
 
 
-<header>
+<!-- NAVBAR -->
 
-<h1>CVForge</h1>
+<nav>
 
-<p>Create a professional CV in minutes</p>
+<div class="logo">
+CVForge
+</div>
 
-</header>
+<a href="#builder">
+Create CV
+</a>
 
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>
+Create a Professional CV in Minutes
+</h1>
+
+<p>
+Build a clean and professional resume without complicated design software.
+Choose a template, enter your information, and create your CV.
+</p>
+
+<a
+class="cta"
+href="#builder"
+>
+Create My CV →
+</a>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="features">
+
+<h2>
+Why use CVForge?
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+⚡ Fast
+</h3>
+
+<p>
+Create your CV in just a few minutes.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+🎨 Professional Templates
+</h3>
+
+<p>
+Choose from multiple clean and professional CV designs.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+📱 Mobile Friendly
+</h3>
+
+<p>
+Create your resume directly from your phone or computer.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BUILDER -->
+
+<section id="builder">
+
+<div class="builder-title">
+
+<h2>
+CV Builder
+</h2>
+
+<p>
+Fill in your information below.
+</p>
+
+</div>
 
 
 <div class="container">
@@ -218,12 +380,16 @@ button:active{
 
 <!-- FORM -->
 
-<div class="box form-box">
+<div class="box">
 
-<h2>Your Information</h2>
+<h2>
+Your Information
+</h2>
 
 
-<label>Full Name</label>
+<label>
+Full Name
+</label>
 
 <input
 id="name"
@@ -231,7 +397,9 @@ placeholder="John Doe"
 >
 
 
-<label>Email</label>
+<label>
+Email
+</label>
 
 <input
 id="email"
@@ -239,7 +407,9 @@ placeholder="john@email.com"
 >
 
 
-<label>Phone</label>
+<label>
+Phone
+</label>
 
 <input
 id="phone"
@@ -247,7 +417,9 @@ placeholder="+62 812 3456 789"
 >
 
 
-<label>About Me</label>
+<label>
+About Me
+</label>
 
 <textarea
 id="about"
@@ -255,7 +427,9 @@ placeholder="Write a short professional introduction"
 ></textarea>
 
 
-<label>Experience</label>
+<label>
+Experience
+</label>
 
 <textarea
 id="experience"
@@ -263,7 +437,9 @@ placeholder="Company - Position - Years"
 ></textarea>
 
 
-<label>Education</label>
+<label>
+Education
+</label>
 
 <textarea
 id="education"
@@ -271,7 +447,9 @@ placeholder="University - Degree - Year"
 ></textarea>
 
 
-<label>Choose Template</label>
+<label>
+Choose Template
+</label>
 
 <select id="template">
 
@@ -303,60 +481,68 @@ Download / Print CV
 </div>
 
 
-
 <!-- PREVIEW -->
 
 <div class="box">
 
-<h2 class="preview-title">
-CV Preview
+<h2>
+Preview
 </h2>
-
 
 <div
 id="cvPreview"
 class="cv"
 >
 
-<h1>Your Name</h1>
+<h1>
+Your Name
+</h1>
 
 <div class="contact">
 Email | Phone
 </div>
 
-
-<h2>About Me</h2>
+<h2>
+About Me
+</h2>
 
 <p>
 Your introduction will appear here.
 </p>
 
-
-<h2>Experience</h2>
+<h2>
+Experience
+</h2>
 
 <p>
 Your experience will appear here.
 </p>
 
-
-<h2>Education</h2>
+<h2>
+Education
+</h2>
 
 <p>
 Your education will appear here.
 </p>
 
-
 </div>
 
 </div>
 
-
 </div>
 
+</section>
+
+
+<footer>
+
+CVForge © 2026
+
+</footer>
 
 
 <script>
-
 
 function generateCV(){
 
@@ -397,12 +583,9 @@ ${name || "Your Name"}
 </h1>
 
 <div class="contact">
-
 ${email || "Email"} |
 ${phone || "Phone"}
-
 </div>
-
 
 <h2>
 About Me
@@ -412,7 +595,6 @@ About Me
 ${about || "Your professional introduction will appear here."}
 </p>
 
-
 <h2>
 Experience
 </h2>
@@ -420,7 +602,6 @@ Experience
 <p>
 ${experience || "Your work experience will appear here."}
 </p>
-
 
 <h2>
 Education
@@ -433,7 +614,6 @@ ${education || "Your education will appear here."}
 `;
 
 }
-
 
 </script>
 
