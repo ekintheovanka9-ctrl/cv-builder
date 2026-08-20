@@ -1,262 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CVForge - Free CV Builder</title>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>CVForge - CV Builder</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 <style>
 
 *{
-  box-sizing:border-box;
+box-sizing:border-box;
 }
 
 body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#f8fafc;
-  color:#111827;
+margin:0;
+font-family:Arial,sans-serif;
+background:#f1f5f9;
+color:#111827;
 }
 
-/* NAVBAR */
-
-nav{
-  height:65px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 7%;
-  background:white;
-  border-bottom:1px solid #e5e7eb;
+header{
+background:#111827;
+color:white;
+text-align:center;
+padding:35px 20px;
 }
 
-.logo{
-  font-size:22px;
-  font-weight:bold;
+header h1{
+margin:0;
+font-size:36px;
 }
 
-nav a{
-  text-decoration:none;
-  color:#111827;
-}
-
-/* HERO */
-
-.hero{
-  text-align:center;
-  padding:80px 20px 70px;
-  background:white;
-}
-
-.hero h1{
-  max-width:750px;
-  margin:auto;
-  font-size:48px;
-  line-height:1.1;
-}
-
-.hero p{
-  max-width:600px;
-  margin:20px auto;
-  font-size:18px;
-  color:#64748b;
-  line-height:1.6;
-}
-
-.cta{
-  display:inline-block;
-  margin-top:15px;
-  padding:15px 28px;
-  background:#111827;
-  color:white;
-  border-radius:9px;
-  text-decoration:none;
-  font-weight:bold;
-}
-
-/* FEATURES */
-
-.features{
-  max-width:1000px;
-  margin:auto;
-  padding:60px 20px;
-}
-
-.features h2{
-  text-align:center;
-  margin-bottom:35px;
-}
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.card{
-  background:white;
-  padding:25px;
-  border-radius:12px;
-  border:1px solid #e5e7eb;
-}
-
-.card h3{
-  margin-top:0;
-}
-
-.card p{
-  color:#64748b;
-  line-height:1.5;
-}
-
-/* BUILDER */
-
-#builder{
-  max-width:1100px;
-  margin:auto;
-  padding:60px 20px;
-}
-
-.builder-title{
-  text-align:center;
-  margin-bottom:30px;
+header p{
+color:#cbd5e1;
 }
 
 .container{
-  display:grid;
-  grid-template-columns:380px 1fr;
-  gap:25px;
+max-width:1100px;
+margin:25px auto;
+padding:15px;
+display:grid;
+grid-template-columns:380px 1fr;
+gap:25px;
 }
 
 .box{
-  background:white;
-  padding:22px;
-  border-radius:15px;
-  box-shadow:0 5px 20px rgba(0,0,0,.06);
+background:white;
+padding:22px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
 label{
-  display:block;
-  font-weight:bold;
-  margin-top:12px;
+display:block;
+font-weight:bold;
+margin-top:12px;
 }
 
 input,
 textarea,
 select{
-  width:100%;
-  padding:12px;
-  margin-top:6px;
-  border:1px solid #d1d5db;
-  border-radius:8px;
-  font-size:15px;
+
+width:100%;
+
+padding:12px;
+
+margin-top:6px;
+
+border:1px solid #d1d5db;
+
+border-radius:8px;
+
+font-size:15px;
+
 }
 
 textarea{
-  min-height:90px;
+min-height:90px;
 }
 
 button{
-  width:100%;
-  padding:13px;
-  margin-top:12px;
-  border:0;
-  border-radius:8px;
-  background:#111827;
-  color:white;
-  font-size:16px;
-  font-weight:bold;
+
+width:100%;
+
+padding:13px;
+
+margin-top:12px;
+
+border:0;
+
+border-radius:8px;
+
+background:#111827;
+
+color:white;
+
+font-size:16px;
+
+font-weight:bold;
+
 }
 
 .cv{
-  background:white;
-  min-height:700px;
-  padding:45px;
-  border:1px solid #ddd;
+
+background:white;
+
+min-height:700px;
+
+padding:45px;
+
+border:1px solid #ddd;
+
 }
 
 .cv h1{
-  margin:0;
-  font-size:34px;
+
+margin:0;
+
+font-size:34px;
+
 }
 
 .cv .contact{
-  color:#64748b;
-  margin-top:8px;
+
+color:#64748b;
+
+margin-top:8px;
+
 }
 
 .cv h2{
-  margin-top:30px;
-  padding-bottom:7px;
-  border-bottom:2px solid #111827;
+
+margin-top:30px;
+
+padding-bottom:7px;
+
+border-bottom:2px solid #111827;
+
 }
 
 .cv p{
-  line-height:1.6;
-  white-space:pre-line;
+
+line-height:1.6;
+
+white-space:pre-line;
+
 }
+
 
 /* MODERN */
 
 .modern{
-  border-left:10px solid #2563eb;
+
+border-left:10px solid #2563eb;
+
 }
 
 .modern h2{
-  color:#2563eb;
-  border-bottom:2px solid #2563eb;
+
+color:#2563eb;
+
+border-bottom:2px solid #2563eb;
+
 }
+
 
 /* MINIMAL */
 
 .minimal{
-  font-family:Georgia,serif;
+
+font-family:Georgia,serif;
+
 }
 
 .minimal h1{
-  text-align:center;
+
+text-align:center;
+
 }
 
 .minimal .contact{
-  text-align:center;
+
+text-align:center;
+
 }
 
 .minimal h2{
-  text-align:center;
-  border-bottom:1px solid #999;
+
+text-align:center;
+
+border-bottom:1px solid #999;
+
 }
 
-/* FOOTER */
-
-footer{
-  text-align:center;
-  padding:30px;
-  color:#64748b;
-  background:#111827;
-  color:white;
-}
 
 /* MOBILE */
 
 @media(max-width:800px){
 
-  .hero h1{
-    font-size:36px;
-  }
+.container{
 
-  .cards{
-    grid-template-columns:1fr;
-  }
+grid-template-columns:1fr;
 
-  .container{
-    grid-template-columns:1fr;
-  }
+}
 
-  .cv{
-    padding:25px;
-  }
+.cv{
+
+padding:25px;
+
+}
 
 }
 
@@ -264,115 +222,21 @@ footer{
 
 </head>
 
+
 <body>
 
 
-<!-- NAVBAR -->
-
-<nav>
-
-<div class="logo">
-CVForge
-</div>
-
-<a href="#builder">
-Create CV
-</a>
-
-</nav>
-
-
-<!-- HERO -->
-
-<section class="hero">
+<header>
 
 <h1>
-Create a Professional CV in Minutes
+CVForge
 </h1>
 
 <p>
-Build a clean and professional resume without complicated design software.
-Choose a template, enter your information, and create your CV.
+Create a professional CV in minutes
 </p>
 
-<a
-class="cta"
-href="#builder"
->
-Create My CV →
-</a>
-
-</section>
-
-
-<!-- FEATURES -->
-
-<section class="features">
-
-<h2>
-Why use CVForge?
-</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>
-⚡ Fast
-</h3>
-
-<p>
-Create your CV in just a few minutes.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>
-🎨 Professional Templates
-</h3>
-
-<p>
-Choose from multiple clean and professional CV designs.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>
-📱 Mobile Friendly
-</h3>
-
-<p>
-Create your resume directly from your phone or computer.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- BUILDER -->
-
-<section id="builder">
-
-<div class="builder-title">
-
-<h2>
-CV Builder
-</h2>
-
-<p>
-Fill in your information below.
-</p>
-
-</div>
+</header>
 
 
 <div class="container">
@@ -469,12 +333,16 @@ Minimal
 
 
 <button onclick="generateCV()">
+
 Generate CV
+
 </button>
 
 
-<button onclick="window.print()">
-Download / Print CV
+<button onclick="downloadPDF()">
+
+Download CV as PDF
+
 </button>
 
 
@@ -489,6 +357,7 @@ Download / Print CV
 Preview
 </h2>
 
+
 <div
 id="cvPreview"
 class="cv"
@@ -502,6 +371,7 @@ Your Name
 Email | Phone
 </div>
 
+
 <h2>
 About Me
 </h2>
@@ -510,6 +380,7 @@ About Me
 Your introduction will appear here.
 </p>
 
+
 <h2>
 Experience
 </h2>
@@ -517,6 +388,7 @@ Experience
 <p>
 Your experience will appear here.
 </p>
+
 
 <h2>
 Education
@@ -530,19 +402,12 @@ Your education will appear here.
 
 </div>
 
+
 </div>
-
-</section>
-
-
-<footer>
-
-CVForge © 2026
-
-</footer>
 
 
 <script>
+
 
 function generateCV(){
 
@@ -583,9 +448,12 @@ ${name || "Your Name"}
 </h1>
 
 <div class="contact">
+
 ${email || "Email"} |
 ${phone || "Phone"}
+
 </div>
+
 
 <h2>
 About Me
@@ -595,6 +463,7 @@ About Me
 ${about || "Your professional introduction will appear here."}
 </p>
 
+
 <h2>
 Experience
 </h2>
@@ -602,6 +471,7 @@ Experience
 <p>
 ${experience || "Your work experience will appear here."}
 </p>
+
 
 <h2>
 Education
@@ -615,8 +485,179 @@ ${education || "Your education will appear here."}
 
 }
 
+
+async function downloadPDF(){
+
+const {
+jsPDF
+} = window.jspdf;
+
+
+const name =
+document.getElementById("name").value
+|| "My-CV";
+
+
+const email =
+document.getElementById("email").value
+|| "";
+
+
+const phone =
+document.getElementById("phone").value
+|| "";
+
+
+const about =
+document.getElementById("about").value
+|| "";
+
+
+const experience =
+document.getElementById("experience").value
+|| "";
+
+
+const education =
+document.getElementById("education").value
+|| "";
+
+
+const pdf =
+new jsPDF();
+
+
+let y = 25;
+
+
+pdf.setFontSize(24);
+
+pdf.text(
+name,
+20,
+y
+);
+
+
+y += 10;
+
+
+pdf.setFontSize(11);
+
+pdf.text(
+email + " | " + phone,
+20,
+y
+);
+
+
+y += 18;
+
+
+pdf.setFontSize(16);
+
+pdf.text(
+"ABOUT ME",
+20,
+y
+);
+
+
+y += 8;
+
+
+pdf.setFontSize(11);
+
+let aboutLines =
+pdf.splitTextToSize(
+about || "No information provided.",
+170
+);
+
+
+pdf.text(
+aboutLines,
+20,
+y
+);
+
+
+y +=
+aboutLines.length * 6
++ 15;
+
+
+pdf.setFontSize(16);
+
+pdf.text(
+"EXPERIENCE",
+20,
+y
+);
+
+
+y += 8;
+
+
+pdf.setFontSize(11);
+
+let experienceLines =
+pdf.splitTextToSize(
+experience || "No information provided.",
+170
+);
+
+
+pdf.text(
+experienceLines,
+20,
+y
+);
+
+
+y +=
+experienceLines.length * 6
++ 15;
+
+
+pdf.setFontSize(16);
+
+pdf.text(
+"EDUCATION",
+20,
+y
+);
+
+
+y += 8;
+
+
+pdf.setFontSize(11);
+
+let educationLines =
+pdf.splitTextToSize(
+education || "No information provided.",
+170
+);
+
+
+pdf.text(
+educationLines,
+20,
+y
+);
+
+
+pdf.save(
+name.replace(/\s+/g,"-")
++ "-CV.pdf"
+);
+
+}
+
 </script>
 
 
 </body>
+
 </html>
