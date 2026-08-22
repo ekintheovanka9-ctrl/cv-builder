@@ -314,6 +314,21 @@ font-size:15px;
 color:#64748b;
 }
 
+.pro-button{
+display:block;
+width:100%;
+padding:13px;
+margin-top:12px;
+border-radius:8px;
+background:#111827;
+color:white;
+font-size:16px;
+font-weight:bold;
+text-align:center;
+text-decoration:none;
+cursor:pointer;
+}
+
 footer{
 margin-top:60px;
 padding:30px;
@@ -699,10 +714,10 @@ Professional
 
 <div class="price">
 
-$4.99
+Rp75.000
 
 <span>
-/ month
+one-time payment
 </span>
 
 </div>
@@ -725,9 +740,14 @@ $4.99
 </p>
 
 
-<button onclick="showProMessage()">
+<a
+class="pro-button"
+href="https://cvforge2026.lemonsqueezy.com/checkout/buy/a05df369-ac33-4cc8-8eff-a6788c6ce0ca"
+target="_blank"
+rel="noopener"
+>
 Upgrade to PRO
-</button>
+</a>
 
 
 </div>
@@ -1077,15 +1097,6 @@ lines,
 
 pdf.save(
 "Cover-Letter.pdf"
-);
-
-}
-
-
-function showProMessage(){
-
-alert(
-"CVForge PRO is coming soon. Payment will be available soon."
 );
 
 }
